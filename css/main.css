@@ -1,0 +1,105 @@
+@font-face{
+    font-family: neontubes;
+    src: url('../res/neontubes-webfont.ttf') format('truetype');
+}
+
+@keyframes glitch1{
+    20% {text-shadow: none}
+    21% {text-shadow: -5px 0 0 rgb(255,0, 0);}
+    22% {text-shadow: none}
+    49% {text-shadow: none}
+    49.5% {text-shadow: 10px 0 0 rgb(0,255,0);}
+    50% {text-shadow:none}
+    50.5% {text-shadow: -3px 0 0 rgb(255,0,0);}
+    51% {text-shadow:none;}
+    51.5% {text-shadow: 5px 0 0 rgb(0,0,255);}
+    52% {text-shadow:none;}
+    82% {text-shadow:none;}
+    83% {text-shadow: 3px 0 0 rgb(0,0,255);}
+    84% {text-shadow:none;}
+}
+
+@keyframes blink {
+    40% { opacity: 1; }
+    42% { opacity: 0.1; }
+    43% { opacity: 1; }
+    45% { opacity: 0.8; }
+    46% { opacity: 1; }
+    46.5% { opacity: 0.2; }
+    47% { opacity: 1; }
+}
+
+body{
+    background: #1e1e1e;
+}
+
+.neon{
+    font-size: 1em;
+    font-family: neontubes, arial;
+    color: rgb(243, 243, 21);
+    text-decoration:none;
+}
+
+.neon.on{
+    text-shadow:
+        0 0 0 transparent,
+        0 0 5px rgba(243, 243, 21, 1),
+        0 0 10px rgba(243, 243, 21, 1),
+        0 0 20px rgba(243, 243, 21, 1),
+        0 0 40px rgba(243, 243, 21, 1),
+        0 0 70px rgba(243, 243, 21, .8),
+        0 0 80px rgba(243, 243, 21, .5)
+}
+
+.neon.off{
+    text-shadow:
+        0 0 0 transparent,
+        0 0 5px rgba(243, 243, 21, .5),
+        0 0 10px rgba(243, 243, 21, .3)
+}
+
+a.neon:hover{
+    text-shadow:
+        0 0 0 transparent,
+        0 0 5px rgba(243, 243, 21, 1),
+        0 0 10px rgba(243, 243, 21, 1),
+        0 0 20px rgba(243, 243, 21, 1),
+        0 0 40px rgba(243, 243, 21, 1),
+        0 0 70px rgba(243, 243, 21, .8),
+        0 0 80px rgba(243, 243, 21, .5)
+}
+
+.blink{
+    animation: blink 4s infinite alternate;
+}
+
+.glitch{
+    font-size:3em;
+    font-family:Consolas, 'Courier New', monospace;
+    color: rgb(212, 212, 212);
+    animation: glitch1 8s infinite alternate;
+}
+
+nav{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0px;
+}
+
+nav li{
+    display: inline;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    border: 1px #aa0000;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
