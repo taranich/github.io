@@ -36,11 +36,11 @@ body{
 .neon{
     font-size: 1em;
     font-family: neontubes, arial;
-    color: rgb(243, 243, 21);
     text-decoration:none;
 }
 
 .neon.on{
+    color: rgb(243, 243, 150);
     text-shadow:
         0 0 0 transparent,
         0 0 5px rgba(243, 243, 21, 1),
@@ -52,6 +52,7 @@ body{
 }
 
 .neon.off{
+    color: rgb(243, 243, 21);
     text-shadow:
         0 0 0 transparent,
         0 0 5px rgba(243, 243, 21, .5),
@@ -59,6 +60,7 @@ body{
 }
 
 a.neon:hover{
+    color: rgb(243, 243, 150);
     text-shadow:
         0 0 0 transparent,
         0 0 5px rgba(243, 243, 21, 1),
@@ -82,6 +84,10 @@ a.neon:hover{
 
 nav{
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav ul{
@@ -91,9 +97,8 @@ nav ul{
 
 nav li{
     display: inline;
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
-    border: 1px #aa0000;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .container{
@@ -102,4 +107,40 @@ nav li{
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+footer{
+    font-size:1em;
+    font-family:Consolas, 'Courier New', monospace;
+    color: rgb(80, 80, 80);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+footer ul{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer li{
+    display: inline;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.ua.blue{
+    color: rgba(0, 91, 187, 1);
+}
+
+.ua.yellow{
+    color: rgba(255, 213, 0, 1);
 }
